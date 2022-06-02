@@ -1,18 +1,27 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  let reverseWord = word.split("").reverse().join("")
+  return word === reverseWord
 }
 
 /* 
-  Add your pseudocode here
+//Declare variable 
+//Split WORD into an array, reverse the order, and join again.
+//Assign the value of the operation above to the variable I declared.
+//Compare WORD and variable
 */
 
 /*
-  Add written explanation of your solution here
+It was a relatively simple operation.
 */
 
 // You can run `node index.js` to view these console logs
 if (require.main === module) {
-  // add your own custom tests in here
+  console.log("Expecting: true");
+  console.log("=>", isPalindrome("pip"));
+
+  console.log("Expecting: false");
+  console.log("=>", isPalindrome("bottle"));
+
   console.log("Expecting: true");
   console.log("=>", isPalindrome("racecar"));
 
